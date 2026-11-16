@@ -1,124 +1,198 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Planilha Uber e painel de controle financeiro para motorista de aplicativo (99, inDrive) | R$ 29,90</title>
-<meta name="description" content="Painel para celular e planilhas (Excel e Google Sheets) para motorista de aplicativo calcular lucro do dia, lucro por hora e lucro por km. Pagamento único, sem mensalidade.">
-<meta property="og:title" content="Controle financeiro para motorista de aplicativo: veja quanto sobra de verdade">
-<meta property="og:description" content="Lance ganhos e gastos em segundos e veja o lucro do dia, por hora e por km.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planilha Uber | Controle financeiro para motorista de aplicativo - Painel do Motorista</title>
+<meta name="description" content="Planilha Uber e controle financeiro para motorista de aplicativo. Painel + planilhas + guia por R$ 29,90, pagamento único e garantia de 15 dias.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Painel do Motorista de Aplicativo",
+  "description": "Ferramenta de organização financeira para motorista de aplicativo: painel em HTML para celular, planilha para Excel, planilha para Google Sheets e guia rápido em PDF.",
+  "image": ["painel-claro.png","painel-escuro.png"],
+  "brand": {"@type": "Brand", "name": "Painel do Motorista de Aplicativo"},
+  "offers": {"@type": "Offer", "priceCurrency": "BRL", "price": "29.90", "availability": "https://schema.org/InStock", "url": "https://pay.hotmart.com/F108496192F"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Como calcular o lucro por km?", "acceptedAnswer": {"@type": "Answer", "text": "O lucro por km é calculado assim: lucro do dia dividido pelos km rodados no dia. O painel faz essa conta para você."}},
+    {"@type": "Question", "name": "Quanto ganha um motorista de aplicativo?", "acceptedAnswer": {"@type": "Answer", "text": "O ganho varia por cidade, horas trabalhadas, gastos e demanda. Este produto não promete ganhos, ele só ajuda você a organizar e ver quanto sobra."}},
+    {"@type": "Question", "name": "O painel funciona sem internet?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O painel em HTML funciona no navegador do celular, mesmo sem internet, depois de aberto uma vez."}},
+    {"@type": "Question", "name": "O que eu recebo ao comprar?", "acceptedAnswer": {"@type": "Answer", "text": "Você recebe o painel em HTML para celular, a planilha para Excel, a planilha para Google Sheets e o guia rápido em PDF."}},
+    {"@type": "Question", "name": "Como eu recebo o acesso?", "acceptedAnswer": {"@type": "Answer", "text": "Após o pagamento, você recebe o acesso por e-mail para baixar os arquivos e começar a usar no mesmo dia."}},
+    {"@type": "Question", "name": "Tem garantia?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Você tem 15 dias de garantia para pedir reembolso, conforme as regras da plataforma de pagamento."}}
+  ]
+}
+</script>
 <style>
-:root{--teal:#0aa5b7;--dteal:#0b4e61;--coral:#ff6f59;--sun:#ffb524;--bg:#fffaf0;--ink:#12303a;--soft:#4f6a73;--line:#e8e0d0}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
-.w{max-width:760px;margin:0 auto;padding:0 18px}
-section{padding:34px 0}
-h1{font-size:clamp(28px,7vw,44px);line-height:1.12;margin:0 0 12px;color:var(--dteal)}
-h2{font-size:clamp(22px,5vw,30px);margin:0 0 14px;color:var(--dteal)}
-.hero{background:linear-gradient(160deg,var(--teal),#0b7f93);color:#fff;padding:40px 0 46px}
-.hero h1{color:#fff}.hero p{font-size:18px;margin:0 0 20px;opacity:.96}
-.btn{display:inline-block;background:var(--sun);color:var(--dteal);font-weight:800;text-decoration:none;padding:16px 26px;border-radius:16px;font-size:18px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
-.btn.coral{background:var(--coral);color:#fff}
-.small{font-size:14px;color:var(--soft)}.hero .small{color:#e2f7fa}
-.shot{width:100%;border-radius:20px;border:1px solid var(--line);margin-top:22px;box-shadow:0 10px 28px rgba(11,78,97,.18)}
-.grid{display:grid;gap:12px}
-.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
-.card b{color:var(--dteal)}
-ul.ck{list-style:none;padding:0;margin:0}ul.ck li{padding:8px 0 8px 30px;position:relative;border-bottom:1px solid var(--line)}
-ul.ck li:before{content:"✓";position:absolute;left:0;color:#1fa971;font-weight:800}
-ul.no li:before{content:"✕";color:#e5484d}
-.price{background:#fff;border:2px solid var(--teal);border-radius:22px;padding:24px;text-align:center}
-.price .v{font-size:46px;font-weight:900;color:var(--dteal)}
-.price s{color:var(--soft)}
-details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0}
-summary{font-weight:700;cursor:pointer;color:var(--dteal)}
-footer{padding:28px 0 90px;font-size:13px;color:var(--soft);text-align:center;border-top:1px solid var(--line)}
-.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;text-align:center;z-index:5}
-.bar .btn{padding:12px 22px;font-size:16px;width:100%;max-width:420px}
-@media(min-width:700px){.grid.c3{grid-template-columns:repeat(3,1fr)}.bar{display:none}}
-.vid{aspect-ratio:9/16;max-width:300px;margin:18px auto 0;border-radius:20px;background:#eef6f7;border:1px dashed var(--teal);display:flex;align-items:center;justify-content:center;color:var(--soft);text-align:center;padding:14px;font-size:14px}
-</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Product", "name": "Painel do Motorista de Aplicativo", "description": "Painel para celular e planilhas em Excel e Google Sheets para controlar ganhos, gastos, lucro por hora e lucro por km.", "brand": {"@type": "Brand", "name": "Mayra Sterling Studio"}, "offers": {"@type": "Offer", "priceCurrency": "BRL", "price": "29.90", "availability": "https://schema.org/InStock", "url": "https://pay.hotmart.com/F108496192F"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quanto ganha um motorista de aplicativo?", "acceptedAnswer": {"@type": "Answer", "text": "Depende da cidade, das horas rodadas e dos custos. O que importa é o que sobra depois dos gastos: lucro = ganhos − gastos. Em vez de olhar a média dos outros, lance os seus ganhos e gastos no painel e veja o seu lucro por hora e por km."}}, {"@type": "Question", "name": "Como calcular o lucro por km de motorista de aplicativo?", "acceptedAnswer": {"@type": "Answer", "text": "Lucro por km = (ganhos − gastos) ÷ km rodados. Exemplo: R$ 195,50 de lucro em 90 km rodados dão cerca de R$ 2,17 por km. O painel faz essa conta sozinho quando você informa o km inicial e o final do turno."}}, {"@type": "Question", "name": "Como calcular o lucro por hora?", "acceptedAnswer": {"@type": "Answer", "text": "Lucro por hora = lucro do dia ÷ horas trabalhadas. Exemplo: R$ 195,50 em 5 horas dão R$ 39,10 por hora. Conte o tempo ligado, não só o tempo com passageiro."}}, {"@type": "Question", "name": "O que contar como gasto?", "acceptedAnswer": {"@type": "Answer", "text": "Combustível, alimentação, lavagem, pedágio e estacionamento no dia a dia. Para uma conta mais realista, some também uma parte de manutenção, seguro, IPVA e desgaste do carro. O painel mostra o lucro com os gastos que você lança, por isso quanto mais completo o lançamento, mais fiel o resultado."}}, {"@type": "Question", "name": "Como definir uma meta diária?", "acceptedAnswer": {"@type": "Answer", "text": "Some o que precisa tirar no mês (contas e objetivo) mais os gastos fixos do carro e divida pelos dias que pretende rodar. Digite o resultado em Ajustes e a barra do painel mostra quanto falta para a meta."}}, {"@type": "Question", "name": "A planilha é grátis?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Este é um produto pago, com pagamento único de R$ 29,90 e garantia de 15 dias, sem mensalidade."}}, {"@type": "Question", "name": "Posso controlar por semana e por mês?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O painel tem as telas Hoje, Semana e Ajustes, e você pode exportar tudo para planilha quando quiser."}}, {"@type": "Question", "name": "Serve para entregador de aplicativo?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Qualquer trabalho em que você lança ganhos e gastos do dia, como entregas de comida ou encomendas."}}]}]}</script>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--turq:#00B8B5;--turq2:#00D1CC;--coral:#FF6B6B;--coral2:#FF8A7A;--amarelo:#FFD93D;--amarelo2:#FFF3A6;--ink:#1A2A2E;--muted:#5A6B6E;--bg:#FFFDF5;--card:#fff;--line:#FFE9B8}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 32px}
+.topbar{background:var(--amarelo);text-align:center;font-size:13px;font-weight:800;padding:9px 10px}
+.topbar span{background:#fff;padding:2px 8px;border-radius:999px;margin-left:6px}
+header{padding:22px 0 10px;text-align:center}
+h1{font-size:32px;line-height:1.08;letter-spacing:-.5px}
+h1 .hl{background:linear-gradient(90deg,var(--turq),#00A8E8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+h1 .hl2{color:var(--coral)}
+.sub{color:var(--muted);font-size:16px;margin:12px auto;max-width:600px}
+.resumo{background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px;text-align:left;font-size:15px;margin:16px 0;box-shadow:0 6px 18px rgba(0,0,0,.05)}
+.resumo b{color:#0A7A78}
+.preco-box{background:linear-gradient(135deg,#00B8B5,#00A8E8);color:#fff;border-radius:20px;padding:18px;text-align:center;margin:16px 0}
+.preco-box .de{opacity:.85;font-size:14px}
+.preco-box .preco{font-size:40px;font-weight:900;line-height:1}
+.preco-box .preco small{font-size:16px}
+.preco-box p{font-size:13px;opacity:.95;margin-top:6px}
+.btn{display:block;text-align:center;background:var(--coral);color:#fff;text-decoration:none;font-weight:900;font-size:18px;padding:16px;border-radius:999px;box-shadow:0 8px 20px rgba(255,107,107,.35);margin:12px 0}
+.btn:hover{filter:brightness(.96)}
+.btn small{display:block;font-weight:600;font-size:12px;opacity:.95}
+.garantia{text-align:center;font-size:13px;color:var(--muted)}
+.galeria{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+@media(max-width:560px){.galeria{grid-template-columns:1fr 1fr}}
+.fig{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #FFE9B8;box-shadow:0 6px 16px rgba(0,0,0,.06)}
+.fig img{width:100%;display:block;height:auto;aspect-ratio:auto;object-fit:contain;background:#fff}
+.fig figcaption{padding:10px;text-align:center;font-size:13px;font-weight:700}
+.legenda{text-align:center;font-size:13px;color:var(--muted);margin-top:-8px}
+h2{font-size:24px;line-height:1.2;margin:28px 0 10px}
+h2 span{color:var(--coral)}
+h3{font-size:17px;margin-bottom:6px}
+.lead{color:var(--muted)}
+.cards{display:grid;gap:12px}
+.card{background:var(--card);border:1px solid #FFE9B8;border-radius:18px;padding:16px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 4px 14px rgba(0,0,0,.04)}
+.num{flex:0 0 38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:18px}
+.n1{background:var(--turq)} .n2{background:var(--coral)} .n3{background:#FFB703} .n4{background:#7C5CFF}
+.card ul{margin:8px 0 0 18px;color:#33464A;font-size:14px}
+.card ul li{margin:4px 0}
+.badge{display:inline-block;background:var(--amarelo2);border:1px solid var(--amarelo);padding:4px 10px;border-radius:999px;font-size:12px;font-weight:800}
+.problema{background:#FFF1F1;border:1px solid #FFD1D1;border-radius:18px;padding:16px;margin:18px 0}
+.problema ul{margin:10px 0 0 18px}
+.passos{display:grid;gap:12px}
+.passo{background:#fff;border-radius:16px;padding:16px;border:1px solid #E6F7F7;display:flex;gap:12px}
+.passo b.num2{background:var(--turq);color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 34px}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.duas{grid-template-columns:1fr}}
+.sim{background:#E6FFFB;border:1px solid #B8F0EE;border-radius:16px;padding:16px}
+.nao{background:#FFF7E6;border:1px solid #FFE9B8;border-radius:16px;padding:16px}
+.sim ul,.nao ul{margin:8px 0 0 18px;font-size:14px}
+.faq{background:#fff;border-radius:18px;border:1px solid #FFE9B8;overflow:hidden}
+.faq-item{padding:16px;border-bottom:1px solid #FFF1C8}
+.faq-item:last-child{border-bottom:0}
+.faq-item h3{font-size:16px}
+.faq-item p{color:#33464A;font-size:15px;margin-top:6px}
+.aviso{background:#FFFBEA;border:1px dashed #FFB703;border-radius:14px;padding:14px;font-size:13px;color:#5A4A00;margin:18px 0;line-height:1.6}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #eee;padding:10px 12px;display:flex;gap:10px;align-items:center;z-index:20}
+.sticky b{font-size:18px} .sticky small{display:block;color:var(--muted);font-size:12px}
+.sticky a{flex:1;background:var(--coral);color:#fff;text-align:center;text-decoration:none;font-weight:900;padding:12px;border-radius:999px}
+footer{text-align:center;color:#8A9A9B;font-size:12px;padding:18px 0 90px;line-height:1.7}
+.check{color:#00A8A8;font-weight:900}
+.preco-box .de,.de{text-decoration:none!important}</style>
 </head>
 <body>
+<div class="topbar">PAGAMENTO ÚNICO <span>R$ 29,90 • Garantia de 15 dias</span></div>
+<div class="wrap">
+<header>
+<p class="badge">✦ PARA MOTORISTA DE APLICATIVO ✦</p>
+<h1>Planilha Uber<br><span class="hl">Controle financeiro</span><br>para motorista <span class="hl2">de aplicativo</span></h1>
+<p class="sub">Saiba quanto sobra no fim do dia, sem fazer conta de cabeça e sem planilha confusa.</p>
+<p class="sub" style="font-weight:800;margin-top:10px">Feito para quem não quer se preocupar e não tem tempo para aprender aplicativo. Leia o guia uma vez, é simples e intuitivo, e pronto: você nunca mais perde tempo.</p>
+</header>
 
-<div class="hero"><div class="w">
-  <p style="font-weight:700;letter-spacing:.5px;margin-bottom:8px">PARA MOTORISTA DE UBER, 99, INDRIVE E BOLT</p>
-  <h1>Controle financeiro para motorista de aplicativo: veja quanto sobra de verdade.</h1>
-  <p>Lance ganhos e gastos em segundos, direto do celular, e o painel mostra o <b>lucro do dia, o lucro por hora e o lucro por km</b>. Sem app para baixar e sem mensalidade.</p>
-  <a class="btn" href="https://pay.hotmart.com/F108496192F" target="_blank" rel="noopener" id="c1">Quero meu painel</a>
-  <p class="small" style="margin-top:12px">Acesso imediato · Funciona sem internet · Garantia de 15 dias</p>
-  <img class="shot" src="dois-modos-claro-e-escuro.png" alt="Painel do Motorista no modo claro e no modo escuro">
-</div></div>
 
-<section><div class="w">
-  <h2>Muita gente roda o dia todo e não sabe o que ficou no bolso.</h2>
-  <p>A corrida entra, o combustível sai, a comida sai, a manutenção aparece de repente. No fim do mês, o dinheiro some e você não sabe onde. Este painel mostra isso <b>em números simples</b>, todos os dias.</p>
-  <div class="grid c3">
-    <div class="card"><b>Lucro do dia</b><br>O que sobrou depois dos gastos, com uma barra até a sua meta.</div>
-    <div class="card"><b>Por hora e por km</b><br>Saiba se o turno compensou: quanto você ganha por hora e por km rodado.</div>
-    <div class="card"><b>Para onde foi</b><br>Combustível, manutenção, lavagem, alimentação: veja onde o dinheiro escapa.</div>
-  </div>
-</div></section>
+<div style="margin:16px 0;border-radius:18px;overflow:hidden;border:1px solid #FFE9B8;box-shadow:0 8px 20px rgba(0,0,0,.08)">
+<img src="motorista-no-carro.webp" alt="Motorista no carro começando o turno, sorrindo, com o celular no suporte" style="width:100%;display:block">
+<div style="background:#fff;padding:12px;text-align:center;font-size:13px;font-weight:700">🚗 Começando o turno com tudo anotado — sem adivinhar quanto sobrou<br><span style="font-weight:400;font-size:12px;color:#5b727a">Imagem ilustrativa criada por inteligência artificial.</span></div>
+</div>
 
-<section style="background:#fff"><div class="w">
-  <h2>O que você recebe</h2>
-  <ul class="ck">
-    <li><b>Painel do Motorista (HTML para celular):</b> botões grandes <i>+ Ganho</i> e <i>+ Gasto</i>, turno com km inicial e final, meta diária com semáforo.</li>
-    <li><b>Modo claro e modo escuro:</b> claro para o dia, escuro para dirigir à noite.</li>
-    <li><b>Planilha para Excel</b> com painel, gráficos, metas e checklist da semana.</li>
-    <li><b>Planilha para Google Sheets</b> com painel do turno (km, horas, lucro por hora e por km).</li>
-    <li><b>Guia rápido</b> de como usar, em poucos minutos.</li>
-  </ul>
-  <div class="vid">Vídeo de demonstração<br>(entra aqui)</div>
-</div></section>
+<div class="resumo">
+<b>Resumo:</b> O <b>Painel do Motorista de Aplicativo</b> é uma ferramenta de organização financeira para quem dirige por aplicativo. Ele inclui painel em HTML para celular, planilha para Excel, planilha para Google Sheets e guia rápido em PDF. O preço é <b>R$ 29,90, pagamento único</b>, com <b>garantia de 15 dias</b>.
+</div>
 
-<section><div class="w">
-  <h2>Como funciona, em 3 passos</h2>
-  <div class="grid">
-    <div class="card"><b>1. Toque em “Começar turno”</b><br>Se quiser, informe o km do carro.</div>
-    <div class="card"><b>2. Lance cada ganho e cada gasto</b><br>Leva uns 10 segundos. Escolha Uber, 99, combustível, etc.</div>
-    <div class="card"><b>3. Veja o resultado</b><br>Lucro do dia, por hora, por km e quanto falta para a meta.</div>
-  </div>
-  <p class="small">Seus dados ficam só no seu celular, no navegador. Você pode exportar para planilha quando quiser.</p>
-</div></section>
+<div class="preco-box">
+<div class="de">Acesso completo</div>
+<div class="preco">R$ 29,90 <small>pagamento único</small></div>
+<p>Painel + 2 planilhas + guia em PDF • Sem mensalidade • Garantia de 15 dias</p>
+</div>
 
-<section style="background:#fff"><div class="w">
-  <div class="grid" style="gap:18px">
-    <div><h2>É para você se…</h2><ul class="ck">
-      <li>Roda de aplicativo e quer saber o lucro real.</li><li>Quer uma ferramenta simples, que abre no celular.</li><li>Prefere pagar uma vez, sem mensalidade.</li></ul></div>
-    <div><h2>Não é para você se…</h2><ul class="ck no">
-      <li>Espera que a planilha gere dinheiro sozinha. Ela organiza; quem roda é você.</li><li>Procura um app com GPS ou integração automática com o Uber.</li></ul></div>
-  </div>
-</div></section>
+<a class="btn" href="https://pay.hotmart.com/F108496192F">QUERO ORGANIZAR MEU DIA<br><small>Comprar agora por R$ 29,90 • Pagamento seguro</small></a>
+<p class="garantia">✓ Garantia de 15 dias &nbsp; ✓ Recebe por e-mail &nbsp; ✓ Usa no celular</p>
 
-<section style="background:#fff"><div class="w"><h2>Como calcular o lucro de motorista de aplicativo</h2><p>Respostas diretas, que valem com ou sem o painel:</p><details><summary>Quanto ganha um motorista de aplicativo?</summary><p>Depende da cidade, das horas rodadas e dos custos. O que importa é o que sobra depois dos gastos: lucro = ganhos − gastos. Em vez de olhar a média dos outros, lance os seus ganhos e gastos no painel e veja o seu lucro por hora e por km.</p></details><details><summary>Como calcular o lucro por km de motorista de aplicativo?</summary><p>Lucro por km = (ganhos − gastos) ÷ km rodados. Exemplo: R$ 195,50 de lucro em 90 km rodados dão cerca de R$ 2,17 por km. O painel faz essa conta sozinho quando você informa o km inicial e o final do turno.</p></details><details><summary>Como calcular o lucro por hora?</summary><p>Lucro por hora = lucro do dia ÷ horas trabalhadas. Exemplo: R$ 195,50 em 5 horas dão R$ 39,10 por hora. Conte o tempo ligado, não só o tempo com passageiro.</p></details><details><summary>O que contar como gasto?</summary><p>Combustível, alimentação, lavagem, pedágio e estacionamento no dia a dia. Para uma conta mais realista, some também uma parte de manutenção, seguro, IPVA e desgaste do carro. O painel mostra o lucro com os gastos que você lança, por isso quanto mais completo o lançamento, mais fiel o resultado.</p></details><details><summary>Como definir uma meta diária?</summary><p>Some o que precisa tirar no mês (contas e objetivo) mais os gastos fixos do carro e divida pelos dias que pretende rodar. Digite o resultado em Ajustes e a barra do painel mostra quanto falta para a meta.</p></details></div></section>
-<section><div class="w">
-  <div class="price">
-    <div class="small">Pagamento único</div>
-    <div class="v">R$ 29,90</div>
-    <p style="margin:6px 0 18px">Painel + planilha Excel + planilha Google Sheets + guia</p>
-    <a class="btn coral" href="https://pay.hotmart.com/F108496192F" target="_blank" rel="noopener" id="c2">Quero meu painel agora</a>
-    <p class="small" style="margin-top:12px">Garantia de 15 dias: se não gostar, devolvemos o valor pela Hotmart.</p>
-  </div>
-</div></section>
+<h2>Veja o painel <span>como ele é</span></h2>
+<p class="lead">Escolha o modo que prefere: claro para o dia, escuro para a noite.</p>
+<div class="galeria">
+<figure class="fig"><img src="painel-claro.png" alt="Painel do Motorista de Aplicativo em modo claro, com botões Ganho e Gasto, lucro do dia e meta diária"><figcaption>☀️ Modo claro</figcaption></figure>
+<figure class="fig"><img src="painel-escuro.png" alt="Painel do Motorista de Aplicativo em modo escuro, com botões Ganho e Gasto, lucro do dia e meta diária"><figcaption>🌙 Modo escuro</figcaption></figure>
+</div>
+<p class="legenda">Escolha o modo que prefere. Os dois mostram as mesmas informações.</p>
 
-<section style="background:#fff"><div class="w">
-  <h2>Perguntas frequentes</h2>
-  <details open><summary>Preciso instalar algum aplicativo?</summary><p>Não. O painel abre no navegador do celular (Chrome, Safari). Pode salvar nos favoritos ou na tela inicial.</p></details>
-  <details><summary>Funciona sem internet?</summary><p>Sim, depois de aberto. Os dados ficam guardados no próprio celular.</p></details>
-  <details><summary>Perco meus dados se limpar o navegador?</summary><p>Pode perder. Por isso existe o botão “Exportar para planilha”: faça uma cópia uma vez por semana.</p></details>
-  <details><summary>Serve para 99, inDrive e Bolt?</summary><p>Sim. Você escolhe a plataforma em cada ganho. Serve também para entregadores e motoristas particulares.</p></details>
-  <details><summary>Funciona no iPhone e no Android?</summary><p>Sim, em qualquer celular com navegador moderno.</p></details>
-  <details><summary>Isso garante que vou ganhar mais?</summary><p>Não. É uma ferramenta de organização: ela mostra os seus números para você decidir melhor. Os resultados dependem de como e quanto você roda.</p></details>
-<details><summary>A planilha é grátis?</summary><p>Não. Este é um produto pago, com pagamento único de R$ 29,90 e garantia de 15 dias, sem mensalidade.</p></details><details><summary>Posso controlar por semana e por mês?</summary><p>Sim. O painel tem as telas Hoje, Semana e Ajustes, e você pode exportar tudo para planilha quando quiser.</p></details><details><summary>Serve para entregador de aplicativo?</summary><p>Sim. Qualquer trabalho em que você lança ganhos e gastos do dia, como entregas de comida ou encomendas.</p></details></div></section>
+<h2>O problema: <span>rodar o dia todo sem saber quanto sobra</span></h2>
+<div class="problema">
+<p>Você roda horas, recebe várias corridas, gasta com combustível e no fim do dia não sabe se lucrou ou só pagou para trabalhar.</p>
+<ul>
+<li>Você sabe quanto entrou, mas não sabe quanto sobrou.</li>
+<li>Você não sabe se valeu a pena rodar mais 2 horas.</li>
+<li>Você não sabe quanto ganha por hora e por km de verdade.</li>
+</ul>
+<p style="margin-top:10px"><b>Sem controle, o dia passa e o dinheiro some.</b> Com controle, você decide com calma quando parar e quando continuar.</p>
+</div>
 
-<footer><div class="w">
-  Painel do Motorista · Mayra Sterling Studio<br>
-  Material de organização financeira pessoal. Não é aconselhamento financeiro, fiscal ou jurídico e não garante ganhos.<br>
-  Produto independente, sem ligação com Uber, 99, inDrive ou Bolt.
-</div></footer>
+<h2>O que você <span>recebe</span></h2>
+<p class="lead">Você recebe 4 itens, todos juntos, no mesmo ZIP.</p>
+<div class="cards" style="margin-top:12px">
+<div class="card"><div class="num n1">1</div><div><span class="badge">PARA O CELULAR</span><h3>1) Painel para celular (HTML)</h3><p>Para usar no dia a dia, direto no navegador do celular.</p><ul><li>Botões <b>+ Ganho</b> e <b>+ Gasto</b> para lançar na hora</li><li>Botão <b>Começar / Terminar turno</b> com cronômetro</li><li>Lucro do dia, lucro por hora e lucro por km</li><li>Meta diária com barra de progresso</li><li><b>Modo claro e modo escuro</b></li><li>Exporta os seus registros para as planilhas, pronto para copiar e colar</li></ul></div></div>
+<div class="card"><div class="num n2">2</div><div><span class="badge">EXCEL</span><h3>2) Planilha para Excel</h3><p>Para quem prefere revisar a semana no computador.</p><ul><li>Painel com resumo do dia e da semana</li><li>Gráficos de ganhos, gastos e lucro</li><li>Metas e checklist da semana</li><li>Para organizar e comparar dias</li></ul></div></div>
+<div class="card"><div class="num n3">3</div><div><span class="badge">GOOGLE SHEETS</span><h3>3) Planilha para Google Sheets</h3><p>Para usar no celular ou no computador, com sua conta Google.</p><ul><li>Painel do turno com km, horas e valores</li><li>Lucro por hora e lucro por km calculados</li><li>Para acompanhar o turno sem fazer conta</li></ul></div></div>
+<div class="card"><div class="num n4">4</div><div><span class="badge">PDF</span><h3>4) Guia rápido em PDF</h3><p>O passo a passo simples do dia de trabalho.</p><ul><li>O que lançar no começo do turno</li><li>O que lançar durante o dia</li><li>O que conferir antes de terminar o turno</li></ul></div></div>
+</div>
 
-<div class="bar"><a class="btn" href="https://pay.hotmart.com/F108496192F" target="_blank" rel="noopener" id="c3">Quero meu painel · R$ 29,90</a></div>
+<h2>Como usar <span>em 3 passos</span></h2>
+<div class="passos">
+<div class="passo"><b class="num2">1</b><div><h3>Comece o turno</h3><p>Abra o painel, toque em <b>Começar turno</b> e anote o km inicial. O tempo começa a contar.</p></div></div>
+<div class="passo"><b class="num2">2</b><div><h3>Lance na hora</h3><p>A cada corrida, toque em <b>+ Ganho</b>. A cada gasto, toque em <b>+ Gasto</b>. O lucro atualiza na hora.</p></div></div>
+<div class="passo"><b class="num2">3</b><div><h3>Termine e confira</h3><p>Toque em <b>Terminar turno</b>, anote o km final e veja lucro do dia, lucro por hora e lucro por km.</p></div></div>
+</div>
+
+<h2>Para quem é <span>e para quem não é</span></h2>
+<div class="duas">
+<div class="sim"><h3>✓ É para você se:</h3><ul><li>Você dirige por aplicativo e quer saber quanto sobra.</li><li>Você quer controlar ganhos, gastos, horas e km.</li><li>Você quer uma rotina simples, no celular.</li></ul></div>
+<div class="nao"><h3>✕ Não é para você se:</h3><ul><li>Você espera promessa de ganhos ou resultado garantido.</li><li>Você quer algo que dirija ou trabalhe por você.</li><li>Você não quer lançar seus ganhos e gastos.</li></ul></div>
+</div>
+
+<div class="aviso"><b>Importante:</b> Este produto é uma ferramenta de organização. Ele não garante ganhos e não promete resultados. Os resultados variam por cidade, horas, gastos e demanda. Este produto não é afiliado, endossado ou patrocinado por nenhum aplicativo de transporte.</div>
+
+<h2>Perguntas frequentes</h2>
+<div class="faq">
+<div class="faq-item"><h3>Como calcular o lucro por km?</h3><p>O lucro por km é calculado assim: lucro do dia dividido pelos km rodados no dia. O painel faz essa conta para você.</p></div>
+<div class="faq-item"><h3>Quanto ganha um motorista de aplicativo?</h3><p>O ganho varia por cidade, horas trabalhadas, gastos e demanda. Este produto não promete ganhos, ele só ajuda você a organizar e ver quanto sobra.</p></div>
+<div class="faq-item"><h3>O painel funciona sem internet?</h3><p>Sim. O painel em HTML funciona no navegador do celular, mesmo sem internet, depois de aberto uma vez.</p></div>
+<div class="faq-item"><h3>O que eu recebo ao comprar?</h3><p>Você recebe o painel em HTML para celular, a planilha para Excel, a planilha para Google Sheets e o guia rápido em PDF.</p></div>
+<div class="faq-item"><h3>Como eu recebo o acesso?</h3><p>Após o pagamento, você recebe o acesso por e-mail para baixar os arquivos e começar a usar no mesmo dia.</p></div>
+<div class="faq-item"><h3>Tem garantia?</h3><p>Sim. Você tem 15 dias de garantia para pedir reembolso, conforme as regras da plataforma de pagamento.</p></div>
+<div class="faq-item"><h3>Preciso saber Excel?</h3><p>Não. O painel em HTML é o principal e é simples de usar. As planilhas são um complemento para quem quer revisar a semana.</p></div>
+<div class="faq-item"><h3>Funciona em qualquer celular?</h3><p>Sim. O painel funciona no navegador do celular, sem instalar aplicativo.</p></div>
+</div>
+
+<div class="preco-box" style="margin-top:22px">
+<div class="preco">R$ 29,90 <small>pagamento único</small></div>
+<p>Painel + planilhas + guia • Garantia de 15 dias</p>
+</div>
+<a class="btn" href="https://pay.hotmart.com/F108496192F">QUERO MEU PAINEL AGORA<br><small>R$ 29,90 • Pagamento único • Garantia de 15 dias</small></a>
+<p class="garantia">Se não for para você, você pode pedir reembolso em até 15 dias.</p>
+</div>
+
+<div class="sticky"><div><b>R$ 29,90</b><small>Pagamento único • 15 dias de garantia</small></div><a href="https://pay.hotmart.com/F108496192F">Comprar agora</a></div>
+
+<footer>
+Painel do Motorista de Aplicativo • Ferramenta de organização financeira<br>
+Não garante ganhos. Resultados variam.<br>
+© 2026 • Pagamento processado pela plataforma de pagamento • Compra e entrega pela Hotmart
+</footer>
 </body>
 </html>
+
