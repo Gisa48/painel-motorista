@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gisa48.github.io/painel-motorista/sitemap.xml

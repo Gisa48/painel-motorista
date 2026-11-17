@@ -1,198 +1,485 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Planilha Uber | Controle financeiro para motorista de aplicativo - Painel do Motorista</title>
-<meta name="description" content="Planilha Uber e controle financeiro para motorista de aplicativo. Painel + planilhas + guia por R$ 29,90, pagamento único e garantia de 15 dias.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel do Motorista de App: lucro por hora e por km no celular</title>
+<meta name="description" content="Painel para motorista de aplicativo: lucro do dia, por hora e por km no celular. Inclui planilhas Excel e Sheets e guia em PDF. R$ 29,90, pagamento único.">
+<link rel="canonical" href="https://gisa48.github.io/painel-motorista/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#141414">
+<meta property="og:type" content="product">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Painel do Motorista de App: lucro por hora e por km no celular">
+<meta property="og:description" content="Toque em Começar turno, lance ganhos e gastos e veja quanto sobrou de verdade. Painel para celular, planilhas e guia. R$ 29,90, pagamento único.">
+<meta property="og:url" content="https://gisa48.github.io/painel-motorista/">
+<meta property="og:image" content="https://gisa48.github.io/painel-motorista/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141414'/%3E%3Cpath d='M14 40l10-14 8 9 8-13 10 18z' fill='%23ff6b35'/%3E%3Ccircle cx='46' cy='18' r='5' fill='%23ffd166'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Painel do Motorista de Aplicativo",
-  "description": "Ferramenta de organização financeira para motorista de aplicativo: painel em HTML para celular, planilha para Excel, planilha para Google Sheets e guia rápido em PDF.",
-  "image": ["painel-claro.png","painel-escuro.png"],
-  "brand": {"@type": "Brand", "name": "Painel do Motorista de Aplicativo"},
-  "offers": {"@type": "Offer", "priceCurrency": "BRL", "price": "29.90", "availability": "https://schema.org/InStock", "url": "https://pay.hotmart.com/F108496192F"}
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "Como calcular o lucro por km?", "acceptedAnswer": {"@type": "Answer", "text": "O lucro por km é calculado assim: lucro do dia dividido pelos km rodados no dia. O painel faz essa conta para você."}},
-    {"@type": "Question", "name": "Quanto ganha um motorista de aplicativo?", "acceptedAnswer": {"@type": "Answer", "text": "O ganho varia por cidade, horas trabalhadas, gastos e demanda. Este produto não promete ganhos, ele só ajuda você a organizar e ver quanto sobra."}},
-    {"@type": "Question", "name": "O painel funciona sem internet?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O painel em HTML funciona no navegador do celular, mesmo sem internet, depois de aberto uma vez."}},
-    {"@type": "Question", "name": "O que eu recebo ao comprar?", "acceptedAnswer": {"@type": "Answer", "text": "Você recebe o painel em HTML para celular, a planilha para Excel, a planilha para Google Sheets e o guia rápido em PDF."}},
-    {"@type": "Question", "name": "Como eu recebo o acesso?", "acceptedAnswer": {"@type": "Answer", "text": "Após o pagamento, você recebe o acesso por e-mail para baixar os arquivos e começar a usar no mesmo dia."}},
-    {"@type": "Question", "name": "Tem garantia?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Você tem 15 dias de garantia para pedir reembolso, conforme as regras da plataforma de pagamento."}}
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Painel do Motorista de App",
+      "description": "Ferramenta de organização financeira para motorista de aplicativo: painel em HTML para celular, planilha para Excel, planilha para Google Sheets e guia completo em PDF.",
+      "image": "https://gisa48.github.io/painel-motorista/img/capa-1080.jpg",
+      "brand": { "@type": "Brand", "name": "Mayra Sterling Studio" },
+      "url": "https://gisa48.github.io/painel-motorista/",
+      "offers": {
+        "@type": "Offer",
+        "price": "29.90",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "url": "https://pay.hotmart.com/F108496192F"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "O Painel do Motorista funciona sem internet?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Depois de aberto no celular, o painel não usa internet para nada. Os dados ficam no próprio celular." } },
+        { "@type": "Question", "name": "Serve para 99, inDrive, Bolt, iFood e Lalamove?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A lista traz Uber, 99, inDrive, Bolt e outras como exemplo. Se a sua plataforma não está na lista, toque no lápis ao lado e escreva o nome." } },
+        { "@type": "Question", "name": "Preciso instalar algum aplicativo?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O painel abre no navegador do celular. Você pode deixar um ícone na tela inicial para abrir com um toque." } },
+        { "@type": "Question", "name": "Onde ficam os meus dados?", "acceptedAnswer": { "@type": "Answer", "text": "Só no seu celular, dentro do navegador, sem prazo. Eles não vão para a internet. Se você limpar os dados do navegador ou trocar de celular, eles somem. Por isso o painel exporta os registros para as planilhas, e o guia recomenda exportar uma vez por semana." } },
+        { "@type": "Question", "name": "A planilha calcula imposto?", "acceptedAnswer": { "@type": "Answer", "text": "Ela faz uma estimativa com a percentagem e o valor fixo que você escrever. Os números da planilha são exemplos para você trocar. Não é conselho fiscal: confirme com o seu contador." } },
+        { "@type": "Question", "name": "Tem mensalidade?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O pagamento é único, de R$ 29,90." } },
+        { "@type": "Question", "name": "Como recebo o produto?", "acceptedAnswer": { "@type": "Answer", "text": "Depois do pagamento, a Hotmart envia o acesso por e-mail. Você baixa o arquivo ZIP com o painel, as duas planilhas e o guia em PDF." } },
+        { "@type": "Question", "name": "O produto promete que vou ganhar mais?", "acceptedAnswer": { "@type": "Answer", "text": "Não. É uma ferramenta de organização. Ela mostra os números que você lança, mas os resultados dependem do seu trabalho e dos valores que você registra." } },
+        { "@type": "Question", "name": "Tem garantia?", "acceptedAnswer": { "@type": "Answer", "text": "Sim, 15 dias de garantia pela Hotmart. Se sentir que não é para você, peça o reembolso dentro desse prazo." } }
+      ]
+    }
   ]
 }
 </script>
+
 <style>
+/* ===== Painel do Motorista | página de vendas (mobile first) ===== */
+:root{
+  --ink:#141414; --ink2:#2b2b2b; --cream:#fff7f0; --cream2:#fdeee2; --line:#eadccf;
+  --orange:#ff6b35; --sun:#ffd166; --green:#00b37a; --red:#ff4d4d; --purple:#7c5cff;
+  --muted:#5f5a55; --radius:22px; --shadow:0 14px 40px rgba(20,20,20,.12);
+  --font:"Plus Jakarta Sans","Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--turq:#00B8B5;--turq2:#00D1CC;--coral:#FF6B6B;--coral2:#FF8A7A;--amarelo:#FFD93D;--amarelo2:#FFF3A6;--ink:#1A2A2E;--muted:#5A6B6E;--bg:#FFFDF5;--card:#fff;--line:#FFE9B8}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;padding-bottom:84px}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-.wrap{max-width:720px;margin:0 auto;padding:0 16px 32px}
-.topbar{background:var(--amarelo);text-align:center;font-size:13px;font-weight:800;padding:9px 10px}
-.topbar span{background:#fff;padding:2px 8px;border-radius:999px;margin-left:6px}
-header{padding:22px 0 10px;text-align:center}
-h1{font-size:32px;line-height:1.08;letter-spacing:-.5px}
-h1 .hl{background:linear-gradient(90deg,var(--turq),#00A8E8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-h1 .hl2{color:var(--coral)}
-.sub{color:var(--muted);font-size:16px;margin:12px auto;max-width:600px}
-.resumo{background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px;text-align:left;font-size:15px;margin:16px 0;box-shadow:0 6px 18px rgba(0,0,0,.05)}
-.resumo b{color:#0A7A78}
-.preco-box{background:linear-gradient(135deg,#00B8B5,#00A8E8);color:#fff;border-radius:20px;padding:18px;text-align:center;margin:16px 0}
-.preco-box .de{opacity:.85;font-size:14px}
-.preco-box .preco{font-size:40px;font-weight:900;line-height:1}
-.preco-box .preco small{font-size:16px}
-.preco-box p{font-size:13px;opacity:.95;margin-top:6px}
-.btn{display:block;text-align:center;background:var(--coral);color:#fff;text-decoration:none;font-weight:900;font-size:18px;padding:16px;border-radius:999px;box-shadow:0 8px 20px rgba(255,107,107,.35);margin:12px 0}
-.btn:hover{filter:brightness(.96)}
-.btn small{display:block;font-weight:600;font-size:12px;opacity:.95}
-.garantia{text-align:center;font-size:13px;color:var(--muted)}
-.galeria{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
-@media(max-width:560px){.galeria{grid-template-columns:1fr 1fr}}
-.fig{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #FFE9B8;box-shadow:0 6px 16px rgba(0,0,0,.06)}
-.fig img{width:100%;display:block;height:auto;aspect-ratio:auto;object-fit:contain;background:#fff}
-.fig figcaption{padding:10px;text-align:center;font-size:13px;font-weight:700}
-.legenda{text-align:center;font-size:13px;color:var(--muted);margin-top:-8px}
-h2{font-size:24px;line-height:1.2;margin:28px 0 10px}
-h2 span{color:var(--coral)}
-h3{font-size:17px;margin-bottom:6px}
-.lead{color:var(--muted)}
-.cards{display:grid;gap:12px}
-.card{background:var(--card);border:1px solid #FFE9B8;border-radius:18px;padding:16px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 4px 14px rgba(0,0,0,.04)}
-.num{flex:0 0 38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:18px}
-.n1{background:var(--turq)} .n2{background:var(--coral)} .n3{background:#FFB703} .n4{background:#7C5CFF}
-.card ul{margin:8px 0 0 18px;color:#33464A;font-size:14px}
-.card ul li{margin:4px 0}
-.badge{display:inline-block;background:var(--amarelo2);border:1px solid var(--amarelo);padding:4px 10px;border-radius:999px;font-size:12px;font-weight:800}
-.problema{background:#FFF1F1;border:1px solid #FFD1D1;border-radius:18px;padding:16px;margin:18px 0}
-.problema ul{margin:10px 0 0 18px}
-.passos{display:grid;gap:12px}
-.passo{background:#fff;border-radius:16px;padding:16px;border:1px solid #E6F7F7;display:flex;gap:12px}
-.passo b.num2{background:var(--turq);color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 34px}
-.duas{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:560px){.duas{grid-template-columns:1fr}}
-.sim{background:#E6FFFB;border:1px solid #B8F0EE;border-radius:16px;padding:16px}
-.nao{background:#FFF7E6;border:1px solid #FFE9B8;border-radius:16px;padding:16px}
-.sim ul,.nao ul{margin:8px 0 0 18px;font-size:14px}
-.faq{background:#fff;border-radius:18px;border:1px solid #FFE9B8;overflow:hidden}
-.faq-item{padding:16px;border-bottom:1px solid #FFF1C8}
-.faq-item:last-child{border-bottom:0}
-.faq-item h3{font-size:16px}
-.faq-item p{color:#33464A;font-size:15px;margin-top:6px}
-.aviso{background:#FFFBEA;border:1px dashed #FFB703;border-radius:14px;padding:14px;font-size:13px;color:#5A4A00;margin:18px 0;line-height:1.6}
-.sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #eee;padding:10px 12px;display:flex;gap:10px;align-items:center;z-index:20}
-.sticky b{font-size:18px} .sticky small{display:block;color:var(--muted);font-size:12px}
-.sticky a{flex:1;background:var(--coral);color:#fff;text-align:center;text-decoration:none;font-weight:900;padding:12px;border-radius:999px}
-footer{text-align:center;color:#8A9A9B;font-size:12px;padding:18px 0 90px;line-height:1.7}
-.check{color:#00A8A8;font-weight:900}
-.preco-box .de,.de{text-decoration:none!important}</style>
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:8px}
+.sr{position:absolute;left:-9999px}
+
+/* barra de topo */
+.top{background:var(--ink);color:#fff;font-size:14px;font-weight:600;text-align:center;padding:9px 14px}
+.top b{color:var(--sun)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 30px;border-radius:16px;font-weight:800;font-size:18px;text-decoration:none;border:0;cursor:pointer;
+  background:linear-gradient(135deg,#ff6b35,#ff8a3d);color:#fff;box-shadow:0 12px 28px rgba(255,107,53,.38);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(255,107,53,.46);filter:saturate(1.06)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink2)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.big{min-height:66px;font-size:20px;width:100%}
+
+/* hero */
+.hero{background:radial-gradient(900px 520px at 90% 0%,rgba(255,107,53,.30),transparent 60%),linear-gradient(180deg,#141414 0%,#1d1d1d 100%);color:#fff;padding:44px 0 56px;overflow:hidden}
+.hero .grid{display:grid;gap:34px;align-items:center}
+.hero .grid>*{min-width:0}
+.tag{color:var(--sun);font-weight:800;letter-spacing:.16em;font-size:13px;text-transform:uppercase}
+h1{font-size:clamp(34px,7.2vw,58px);line-height:1.06;letter-spacing:-.02em;font-weight:800;margin:12px 0 16px}
+h1 em{font-style:normal;color:var(--sun)}
+.lead{font-size:clamp(18px,3.8vw,21px);color:#f0e9e1;max-width:34ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 20px}
+.ticks{list-style:none;display:grid;gap:8px;font-size:15.5px;color:#e6ded5}
+.ticks li::before{content:"✓";color:var(--sun);font-weight:800;margin-right:10px}
+.phones{position:relative;display:flex;justify-content:center;align-items:flex-start;min-height:430px}
+.phone{background:#0a0a0a;border-radius:42px;padding:8px;box-shadow:0 30px 60px rgba(0,0,0,.5),0 0 0 2px #2b2b2b inset;width:clamp(150px,40vw,220px);transition:transform .35s ease}
+.phone img{border-radius:34px;width:100%}
+.phone.a{transform:rotate(-5deg) translateX(14px);z-index:2}
+.phone.b{transform:rotate(5deg) translate(-14px,34px)}
+.phones:hover .a{transform:rotate(-3deg) translateX(10px)}
+.phones:hover .b{transform:rotate(3deg) translate(-10px,26px)}
+.note{font-size:12.5px;color:#cfc6bc;margin-top:18px}
+
+/* seções */
+section{padding:64px 0}
+h2{font-size:clamp(28px,5.6vw,42px);line-height:1.12;letter-spacing:-.015em;font-weight:800;margin-bottom:14px}
+h2 .o{color:var(--orange)}
+.sub{color:var(--muted);max-width:60ch;margin-bottom:30px}
+.answer{background:#fff;border:2px solid var(--ink);border-radius:var(--radius);padding:22px 24px;box-shadow:8px 8px 0 var(--ink);max-width:880px}
+.answer b{background:linear-gradient(transparent 62%,var(--sun) 62%)}
+.cards{display:grid;gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px)}
+.card h3{font-size:20px;line-height:1.25;margin:10px 0 6px}
+.card p{color:var(--muted);font-size:16px}
+.ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;color:#fff}
+.ico.g{background:linear-gradient(135deg,#00b37a,#00d68f)}.ico.r{background:linear-gradient(135deg,#ff4d4d,#ff7a45)}.ico.p{background:linear-gradient(135deg,#7c5cff,#b07cff)}.ico.o{background:linear-gradient(135deg,#ff6b35,#ffb524)}.ico.k{background:linear-gradient(135deg,#141414,#3a3a3a)}.ico.t{background:linear-gradient(135deg,#0aa5b7,#38d0e0)}
+.dark{background:var(--ink);color:#fff}
+.dark .sub{color:#d8d0c7}
+
+/* dor */
+.pain{display:grid;gap:12px;margin:20px 0 26px;list-style:none}
+.pain li{background:#fff;border-left:6px solid var(--red);border-radius:14px;padding:16px 18px;font-weight:600;box-shadow:var(--shadow)}
+.solve{font-size:20px;font-weight:700;max-width:46ch}
+
+/* passos */
+.steps{display:grid;gap:18px;counter-reset:s;list-style:none}
+.steps li{position:relative;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 22px 78px;box-shadow:var(--shadow)}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:20px;top:20px;width:42px;height:42px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;font-size:20px;display:grid;place-items:center}
+.steps h3{font-size:20px;margin-bottom:4px}
+.steps p{color:var(--muted)}
+
+/* galeria de telas */
+.tabs{display:inline-flex;background:#2b2b2b;border-radius:99px;padding:5px;margin-bottom:26px}
+.tabs button{border:0;background:transparent;color:#d8d0c7;font:inherit;font-weight:700;padding:10px 22px;border-radius:99px;cursor:pointer;min-height:44px}
+.tabs button[aria-selected="true"]{background:var(--orange);color:#fff}
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 14px}
+.shot figure{margin:0}
+.shot .phone{width:100%;transform:none;padding:6px;border-radius:30px}
+.shot .phone img{border-radius:24px}
+.shot figcaption{font-weight:700;margin-top:12px;font-size:15.5px;text-align:center}
+.shot figcaption span{display:block;font-weight:500;color:#cfc6bc;font-size:14px}
+.shots .ghost-slot{display:none}
+
+/* planilha */
+.split{display:grid;gap:30px;align-items:center}
+.sheetimg{border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--line);background:#fff;width:100%;max-width:460px;margin-inline:auto}
+.list{list-style:none;display:grid;gap:12px;margin:18px 0}
+.list li{display:flex;gap:12px}
+.list li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px;margin-top:2px}
+.warn{background:#fff6dd;border:2px solid var(--sun);border-radius:16px;padding:14px 16px;font-size:15.5px}
+
+/* o que vem */
+.zip{display:grid;gap:14px}
+.zip .card{display:flex;gap:16px;align-items:flex-start}
+.zip .n{flex:none;width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;font-size:17px;display:grid;place-items:center}
+
+/* para quem */
+.for{display:grid;gap:16px}
+.for .card ul{list-style:none;display:grid;gap:10px;margin-top:10px}
+.for .yes li::before{content:"✓ ";color:var(--green);font-weight:800}
+.for .no li::before{content:"✕ ";color:var(--red);font-weight:800}
+
+/* preço */
+.price{background:linear-gradient(160deg,#141414,#2b2b2b);color:#fff;border-radius:28px;padding:34px 26px;text-align:center;box-shadow:var(--shadow);max-width:560px;margin-inline:auto}
+.price .big-n{font-size:clamp(54px,12vw,76px);font-weight:800;line-height:1;color:var(--sun);margin:10px 0 4px}
+.price .small{color:#d8d0c7;font-size:15px}
+.price ul{list-style:none;text-align:left;display:grid;gap:10px;margin:22px auto;max-width:360px}
+.price li::before{content:"✓ ";color:var(--sun);font-weight:800}
+.guarantee{display:flex;gap:14px;align-items:flex-start;background:var(--cream2);border:1px solid var(--line);border-radius:18px;padding:16px 18px;margin:22px auto 0;max-width:560px;font-size:15.5px}
+.guarantee b{display:block}
+
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:12px;box-shadow:var(--shadow)}
+summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:700;display:flex;justify-content:space-between;gap:14px;min-height:56px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;font-weight:700;color:var(--orange);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 20px 18px;color:var(--muted)}
+
+/* artigo */
+.article{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.article .txt{max-width:760px}
+.article h3{font-size:22px;margin:24px 0 8px}
+.article p,.article li{color:#3b3733}
+.article ul{margin:8px 0 8px 22px}
+.calc{background:var(--cream);border-radius:16px;padding:16px 18px;margin:14px 0;border-left:6px solid var(--orange);font-weight:600}
+
+/* rodapé */
+footer{background:var(--ink);color:#cfc6bc;padding:36px 0;font-size:14px}
+footer p{max-width:80ch;margin-bottom:10px}
+
+/* barra fixa mobile */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(20,20,20,.96);backdrop-filter:blur(8px);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:12px;align-items:center;justify-content:space-between;transform:translateY(110%);transition:transform .3s ease}
+.sticky.on{transform:none}
+.sticky .p{color:#fff;font-weight:800;line-height:1.2}
+.sticky .p small{display:block;color:#cfc6bc;font-weight:500;font-size:12.5px}
+.sticky .btn{min-height:50px;padding:0 22px;font-size:16px}
+
+/* entrada suave */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+@media (min-width:760px){
+  body{padding-bottom:0}
+  .cards.c3{grid-template-columns:repeat(3,1fr)}.cards.c2{grid-template-columns:repeat(2,1fr)}
+  .zip{grid-template-columns:repeat(2,1fr)}
+  .for{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr 1fr}
+  .shots{grid-template-columns:repeat(4,1fr)}
+  .sticky{display:none}
+}
+@media (min-width:900px){
+  .hero .grid{grid-template-columns:1.05fr .95fr}
+  .phone{width:250px}
+  .phones{min-height:560px}
+}
+</style>
 </head>
 <body>
-<div class="topbar">PAGAMENTO ÚNICO <span>R$ 29,90 • Garantia de 15 dias</span></div>
-<div class="wrap">
-<header>
-<p class="badge">✦ PARA MOTORISTA DE APLICATIVO ✦</p>
-<h1>Planilha Uber<br><span class="hl">Controle financeiro</span><br>para motorista <span class="hl2">de aplicativo</span></h1>
-<p class="sub">Saiba quanto sobra no fim do dia, sem fazer conta de cabeça e sem planilha confusa.</p>
-<p class="sub" style="font-weight:800;margin-top:10px">Feito para quem não quer se preocupar e não tem tempo para aprender aplicativo. Leia o guia uma vez, é simples e intuitivo, e pronto: você nunca mais perde tempo.</p>
+
+<div class="top"><b>R$ 29,90</b> pagamento único &nbsp;·&nbsp; Garantia de 15 dias &nbsp;·&nbsp; Sem mensalidade</div>
+
+<header class="hero">
+  <div class="wrap grid">
+    <div>
+      <div class="tag">Para motorista de aplicativo</div>
+      <h1>Saiba quanto <em>sobrou de verdade</em> no fim do dia, direto no celular</h1>
+      <p class="lead">Toque em Começar turno, lance cada ganho e cada gasto e veja o lucro do dia, por hora e por km. Sem fazer conta de cabeça.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://pay.hotmart.com/F108496192F" data-cta="hero">Quero o Painel por R$ 29,90</a>
+        <a class="btn ghost" style="color:#fff;border-color:#fff" href="#como">Ver como funciona</a>
+      </div>
+      <ul class="ticks">
+        <li>Funciona sem internet depois de aberto</li>
+        <li>Modo claro e modo escuro</li>
+        <li>Inclui planilha Excel, Google Sheets e guia em PDF</li>
+        <li>15 dias de garantia pela Hotmart</li>
+      </ul>
+    </div>
+    <div>
+      <div class="phones" aria-label="Telas do Painel do Motorista">
+        <div class="phone a"><img src="img/hoje.webp" width="780" height="1688" alt="Tela Hoje do Painel do Motorista com turno em andamento, lucro de hoje e barra da meta"></div>
+        <div class="phone b"><img src="img/mes-escuro.webp" width="780" height="1688" alt="Tela Mês do Painel do Motorista em modo escuro, com lucro do mês e ganhos por plataforma"></div>
+      </div>
+      <p class="note" style="text-align:center">Valores de exemplo, só para mostrar como o painel funciona.</p>
+    </div>
+  </div>
 </header>
 
+<main>
 
-<div style="margin:16px 0;border-radius:18px;overflow:hidden;border:1px solid #FFE9B8;box-shadow:0 8px 20px rgba(0,0,0,.08)">
-<img src="motorista-no-carro.webp" alt="Motorista no carro começando o turno, sorrindo, com o celular no suporte" style="width:100%;display:block">
-<div style="background:#fff;padding:12px;text-align:center;font-size:13px;font-weight:700">🚗 Começando o turno com tudo anotado — sem adivinhar quanto sobrou<br><span style="font-weight:400;font-size:12px;color:#5b727a">Imagem ilustrativa criada por inteligência artificial.</span></div>
-</div>
+<section style="padding-top:48px">
+  <div class="wrap">
+    <div class="answer rv">
+      <p><b>O que é o Painel do Motorista de App?</b> É uma ferramenta de organização financeira para quem dirige por aplicativo. Você anota ganhos e gastos no celular e ela mostra o lucro do dia, o lucro por hora e o lucro por km. Vem com painel para celular, planilha para Excel, planilha para Google Sheets e guia em PDF. Custa R$ 29,90, pagamento único, com 15 dias de garantia.</p>
+    </div>
+  </div>
+</section>
 
-<div class="resumo">
-<b>Resumo:</b> O <b>Painel do Motorista de Aplicativo</b> é uma ferramenta de organização financeira para quem dirige por aplicativo. Ele inclui painel em HTML para celular, planilha para Excel, planilha para Google Sheets e guia rápido em PDF. O preço é <b>R$ 29,90, pagamento único</b>, com <b>garantia de 15 dias</b>.
-</div>
+<section>
+  <div class="wrap">
+    <h2 class="rv">Você roda o dia inteiro. <span class="o">E no fim, sabe quanto sobrou?</span></h2>
+    <p class="sub rv">Entra dinheiro de várias corridas. Sai combustível, comida, lavagem, manutenção. No fim do dia, a conta fica na cabeça.</p>
+    <ul class="pain">
+      <li class="rv">Você sabe quanto entrou, mas não sabe quanto sobrou.</li>
+      <li class="rv">Você não sabe se valeu a pena rodar mais duas horas.</li>
+      <li class="rv">Você não sabe quanto ganha por hora e por km de verdade.</li>
+    </ul>
+    <p class="solve rv">O painel faz essa conta na hora, com os números que você lançou.</p>
+  </div>
+</section>
 
-<div class="preco-box">
-<div class="de">Acesso completo</div>
-<div class="preco">R$ 29,90 <small>pagamento único</small></div>
-<p>Painel + 2 planilhas + guia em PDF • Sem mensalidade • Garantia de 15 dias</p>
-</div>
+<section id="como" class="dark">
+  <div class="wrap">
+    <h2 class="rv">Como funciona, em 3 toques</h2>
+    <p class="sub rv">Um minuto de manhã, dois toques por corrida e uma olhada no fim do dia.</p>
+    <ol class="steps">
+      <li class="rv"><h3>Comece o turno</h3><p style="color:#444">Toque em <b>Começar turno</b> e, se quiser, escreva o km do carro. Um cronômetro grande passa a contar as horas.</p></li>
+      <li class="rv"><h3>Lance na hora</h3><p style="color:#444">A cada corrida, toque em <b>+ Ganho</b>. Quando gastar, toque em <b>+ Gasto</b>. O lucro do dia atualiza na hora.</p></li>
+      <li class="rv"><h3>Termine e confira</h3><p style="color:#444">Toque em <b>Terminar turno</b> e veja o lucro do dia, por hora e por km, e quanto falta para a sua meta.</p></li>
+    </ol>
+  </div>
+</section>
 
-<a class="btn" href="https://pay.hotmart.com/F108496192F">QUERO ORGANIZAR MEU DIA<br><small>Comprar agora por R$ 29,90 • Pagamento seguro</small></a>
-<p class="garantia">✓ Garantia de 15 dias &nbsp; ✓ Recebe por e-mail &nbsp; ✓ Usa no celular</p>
+<section class="dark" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="rv">Veja o painel por dentro</h2>
+    <p class="sub rv">Quatro telas: Hoje, Semana, Mês e Ano. Escolha o modo que cansa menos a sua vista.</p>
+    <div class="tabs" role="tablist" aria-label="Modo da tela">
+      <button role="tab" aria-selected="true" data-mode="claro" id="tab-claro">☀ Modo claro</button>
+      <button role="tab" aria-selected="false" data-mode="escuro" id="tab-escuro">☾ Modo escuro</button>
+    </div>
+    <div class="shots" id="shots">
+      <div class="shot"><figure><div class="phone"><img data-claro="img/hoje.webp" data-escuro="img/hoje-escuro.webp" src="img/hoje.webp" width="780" height="1688" loading="lazy" alt="Tela Hoje: turno, ganhos, gastos e lucro do dia"></div><figcaption>Hoje<span>turno, ganhos e lucro do dia</span></figcaption></figure></div>
+      <div class="shot"><figure><div class="phone"><img data-claro="img/semana.webp" data-escuro="img/semana.webp" src="img/semana.webp" width="780" height="1688" loading="lazy" alt="Tela Semana: lucro dos últimos 7 dias e ganhos por plataforma"></div><figcaption>Semana<span>7 dias e plataformas</span></figcaption></figure></div>
+      <div class="shot"><figure><div class="phone"><img data-claro="img/mes.webp" data-escuro="img/mes-escuro.webp" src="img/mes.webp" width="780" height="1688" loading="lazy" alt="Tela Mês: lucro do mês, por hora e por km"></div><figcaption>Mês<span>lucro, hora e km</span></figcaption></figure></div>
+      <div class="shot"><figure><div class="phone"><img data-claro="img/ano.webp" data-escuro="img/ano.webp" src="img/ano.webp" width="780" height="1688" loading="lazy" alt="Tela Ano: lucro de cada mês e total do ano"></div><figcaption>Ano<span>mês a mês</span></figcaption></figure></div>
+    </div>
+    <p class="note">Valores de exemplo. Os seus números aparecem conforme você lança.</p>
+  </div>
+</section>
 
-<h2>Veja o painel <span>como ele é</span></h2>
-<p class="lead">Escolha o modo que prefere: claro para o dia, escuro para a noite.</p>
-<div class="galeria">
-<figure class="fig"><img src="painel-claro.png" alt="Painel do Motorista de Aplicativo em modo claro, com botões Ganho e Gasto, lucro do dia e meta diária"><figcaption>☀️ Modo claro</figcaption></figure>
-<figure class="fig"><img src="painel-escuro.png" alt="Painel do Motorista de Aplicativo em modo escuro, com botões Ganho e Gasto, lucro do dia e meta diária"><figcaption>🌙 Modo escuro</figcaption></figure>
-</div>
-<p class="legenda">Escolha o modo que prefere. Os dois mostram as mesmas informações.</p>
+<section>
+  <div class="wrap">
+    <h2 class="rv">O que o painel faz <span class="o">por você</span></h2>
+    <p class="sub rv">Pensado para usar com uma mão, com botões grandes e poucas palavras.</p>
+    <div class="cards c3">
+      <div class="card rv"><div class="ico o">⏱</div><h3>Turno com cronômetro</h3><p>Começar e terminar turno com o km do carro. O painel conta as horas e calcula o lucro por hora.</p></div>
+      <div class="card rv"><div class="ico g">＋</div><h3>Ganho e gasto em dois toques</h3><p>Corridas, gorjeta, combustível, lavagem, comida. Sem formulário comprido.</p></div>
+      <div class="card rv"><div class="ico k">R$</div><h3>Lucro do dia, por hora e por km</h3><p>Você vê o que sobrou depois dos gastos, e quanto cada hora e cada km deixaram.</p></div>
+      <div class="card rv"><div class="ico p">%</div><h3>Meta do dia com barra</h3><p>Escolha quanto quer lucrar por dia. A barra muda de cor conforme você se aproxima.</p></div>
+      <div class="card rv"><div class="ico t">⇄</div><h3>Ganho por plataforma</h3><p>Uber, 99, inDrive, Bolt e outras. Se a sua não está na lista, toque no lápis ✏️ e escreva o nome.</p></div>
+      <div class="card rv"><div class="ico r">▦</div><h3>Resumo do mês e do ano</h3><p>Dias trabalhados, lucro médio por dia e o lucro de cada mês, de janeiro a dezembro.</p></div>
+    </div>
+    <div class="cards c3" style="margin-top:16px">
+      <div class="card rv"><div class="ico k">☾</div><h3>Claro e escuro</h3><p>Um toque troca o modo. O painel lembra a sua escolha.</p></div>
+      <div class="card rv"><div class="ico g">⌁</div><h3>Funciona sem internet</h3><p>Depois de aberto, não precisa de rede. Os dados ficam só no seu celular.</p></div>
+      <div class="card rv"><div class="ico o">⇪</div><h3>Exporta para a planilha</h3><p>Um botão gera o arquivo pronto para colar na planilha do Excel ou do Google Sheets.</p></div>
+    </div>
+  </div>
+</section>
 
-<h2>O problema: <span>rodar o dia todo sem saber quanto sobra</span></h2>
-<div class="problema">
-<p>Você roda horas, recebe várias corridas, gasta com combustível e no fim do dia não sabe se lucrou ou só pagou para trabalhar.</p>
-<ul>
-<li>Você sabe quanto entrou, mas não sabe quanto sobrou.</li>
-<li>Você não sabe se valeu a pena rodar mais 2 horas.</li>
-<li>Você não sabe quanto ganha por hora e por km de verdade.</li>
-</ul>
-<p style="margin-top:10px"><b>Sem controle, o dia passa e o dinheiro some.</b> Com controle, você decide com calma quando parar e quando continuar.</p>
-</div>
+<section style="background:var(--cream2)">
+  <div class="wrap split">
+    <div>
+      <h2 class="rv">E as planilhas, <span class="o">para ver o quadro todo</span></h2>
+      <p class="sub rv">No computador, escolha o mês e veja tudo somado: ganhos, gastos, horas, km e plataformas. Uma versão para Excel e outra para Google Sheets.</p>
+      <ul class="list">
+        <li>Dashboard do mês à sua escolha, sem misturar um mês com o outro</li>
+        <li>Lucro por hora, receita por hora e custo do carro por km</li>
+        <li>Ganho de cada plataforma, e uma linha para as que não estão na lista</li>
+        <li>Reserva, desgaste do carro e imposto estimado com os números que você escolher</li>
+        <li>Aba ANO com o lucro de cada mês</li>
+        <li>Espaço para 5.000 lançamentos, mais de um ano de uso</li>
+      </ul>
+      <p class="warn"><b>Importante:</b> os números de reserva, desgaste e imposto são exemplos para você trocar. A planilha não conhece as regras de imposto de ninguém e não dá conselho fiscal. Confirme com o seu contador.</p>
+    </div>
+    <div><img class="sheetimg rv" src="img/planilha-excel.webp" width="864" height="1201" loading="lazy" alt="Dashboard da planilha em Excel com receita, gastos, lucro, plataformas e horas do mês"></div>
+  </div>
+</section>
 
-<h2>O que você <span>recebe</span></h2>
-<p class="lead">Você recebe 4 itens, todos juntos, no mesmo ZIP.</p>
-<div class="cards" style="margin-top:12px">
-<div class="card"><div class="num n1">1</div><div><span class="badge">PARA O CELULAR</span><h3>1) Painel para celular (HTML)</h3><p>Para usar no dia a dia, direto no navegador do celular.</p><ul><li>Botões <b>+ Ganho</b> e <b>+ Gasto</b> para lançar na hora</li><li>Botão <b>Começar / Terminar turno</b> com cronômetro</li><li>Lucro do dia, lucro por hora e lucro por km</li><li>Meta diária com barra de progresso</li><li><b>Modo claro e modo escuro</b></li><li>Exporta os seus registros para as planilhas, pronto para copiar e colar</li></ul></div></div>
-<div class="card"><div class="num n2">2</div><div><span class="badge">EXCEL</span><h3>2) Planilha para Excel</h3><p>Para quem prefere revisar a semana no computador.</p><ul><li>Painel com resumo do dia e da semana</li><li>Gráficos de ganhos, gastos e lucro</li><li>Metas e checklist da semana</li><li>Para organizar e comparar dias</li></ul></div></div>
-<div class="card"><div class="num n3">3</div><div><span class="badge">GOOGLE SHEETS</span><h3>3) Planilha para Google Sheets</h3><p>Para usar no celular ou no computador, com sua conta Google.</p><ul><li>Painel do turno com km, horas e valores</li><li>Lucro por hora e lucro por km calculados</li><li>Para acompanhar o turno sem fazer conta</li></ul></div></div>
-<div class="card"><div class="num n4">4</div><div><span class="badge">PDF</span><h3>4) Guia rápido em PDF</h3><p>O passo a passo simples do dia de trabalho.</p><ul><li>O que lançar no começo do turno</li><li>O que lançar durante o dia</li><li>O que conferir antes de terminar o turno</li></ul></div></div>
-</div>
+<section>
+  <div class="wrap">
+    <h2 class="rv">O que vem na sua compra</h2>
+    <p class="sub rv">Um único arquivo ZIP com tudo.</p>
+    <div class="zip">
+      <div class="card rv"><span class="n">1</span><div><h3 style="margin-top:0">Painel para celular</h3><p>O arquivo HTML que abre no navegador do celular, com claro e escuro.</p></div></div>
+      <div class="card rv"><span class="n">2</span><div><h3 style="margin-top:0">Planilha para Excel</h3><p>Lançamentos, dashboard do mês, aba ANO, metas e checklist da semana.</p></div></div>
+      <div class="card rv"><span class="n">3</span><div><h3 style="margin-top:0">Planilha para Google Sheets</h3><p>A mesma ideia, para usar com a sua conta Google.</p></div></div>
+      <div class="card rv"><span class="n">4</span><div><h3 style="margin-top:0">Guia completo em PDF</h3><p>12 páginas com prints de cada tela: abrir no celular, usar o dia, passar os dados para a planilha e resolver os problemas mais comuns.</p></div></div>
+    </div>
+  </div>
+</section>
 
-<h2>Como usar <span>em 3 passos</span></h2>
-<div class="passos">
-<div class="passo"><b class="num2">1</b><div><h3>Comece o turno</h3><p>Abra o painel, toque em <b>Começar turno</b> e anote o km inicial. O tempo começa a contar.</p></div></div>
-<div class="passo"><b class="num2">2</b><div><h3>Lance na hora</h3><p>A cada corrida, toque em <b>+ Ganho</b>. A cada gasto, toque em <b>+ Gasto</b>. O lucro atualiza na hora.</p></div></div>
-<div class="passo"><b class="num2">3</b><div><h3>Termine e confira</h3><p>Toque em <b>Terminar turno</b>, anote o km final e veja lucro do dia, lucro por hora e lucro por km.</p></div></div>
-</div>
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="rv">Para quem é <span class="o">e para quem não é</span></h2>
+    <div class="for" style="margin-top:20px">
+      <div class="card yes rv"><h3 style="margin-top:0">É para você se</h3><ul>
+        <li>Dirige por aplicativo e quer saber quanto sobra.</li>
+        <li>Quer controlar ganhos, gastos, horas e km.</li>
+        <li>Prefere uma rotina simples, no celular.</li>
+        <li>Também quer ver o mês e o ano numa planilha.</li></ul></div>
+      <div class="card no rv"><h3 style="margin-top:0">Não é para você se</h3><ul>
+        <li>Espera promessa de ganhos ou resultado garantido.</li>
+        <li>Quer um aplicativo que dirige ou escolhe corridas por você.</li>
+        <li>Não quer anotar nada, nem uma vez por corrida.</li></ul></div>
+    </div>
+  </div>
+</section>
 
-<h2>Para quem é <span>e para quem não é</span></h2>
-<div class="duas">
-<div class="sim"><h3>✓ É para você se:</h3><ul><li>Você dirige por aplicativo e quer saber quanto sobra.</li><li>Você quer controlar ganhos, gastos, horas e km.</li><li>Você quer uma rotina simples, no celular.</li></ul></div>
-<div class="nao"><h3>✕ Não é para você se:</h3><ul><li>Você espera promessa de ganhos ou resultado garantido.</li><li>Você quer algo que dirija ou trabalhe por você.</li><li>Você não quer lançar seus ganhos e gastos.</li></ul></div>
-</div>
+<section id="comprar" class="dark">
+  <div class="wrap">
+    <div class="price rv">
+      <div class="tag">Acesso completo</div>
+      <div class="big-n">R$ 29,90</div>
+      <div class="small">pagamento único, sem mensalidade</div>
+      <ul>
+        <li>Painel para celular, claro e escuro</li>
+        <li>Planilha para Excel</li>
+        <li>Planilha para Google Sheets</li>
+        <li>Guia completo em PDF</li>
+      </ul>
+      <a class="btn big" href="https://pay.hotmart.com/F108496192F" data-cta="preco">Quero organizar meu dia</a>
+      <p class="small" style="margin-top:12px">Pagamento seguro pela Hotmart. Você recebe o acesso por e-mail.</p>
+    </div>
+    <div class="guarantee" style="color:var(--ink)">
+      <span style="font-size:28px">🛡</span>
+      <div><b>Garantia de 15 dias</b>Se em até 15 dias você sentir que não é para você, peça o reembolso pela Hotmart.</div>
+    </div>
+  </div>
+</section>
 
-<div class="aviso"><b>Importante:</b> Este produto é uma ferramenta de organização. Ele não garante ganhos e não promete resultados. Os resultados variam por cidade, horas, gastos e demanda. Este produto não é afiliado, endossado ou patrocinado por nenhum aplicativo de transporte.</div>
+<section id="duvidas">
+  <div class="wrap" style="max-width:860px">
+    <h2 class="rv">Dúvidas frequentes</h2>
+    <p class="sub rv">As respostas que mais ajudam antes de comprar.</p>
+    <details open><summary>O Painel do Motorista funciona sem internet?</summary><p>Sim. Depois de aberto no celular, ele não usa internet para nada. Os dados ficam no próprio celular.</p></details>
+    <details><summary>Serve para 99, inDrive, Bolt, iFood e Lalamove?</summary><p>Sim. A lista traz Uber, 99, inDrive, Bolt e outras como exemplo. Se a sua plataforma não está lá, toque no lápis ao lado e escreva o nome.</p></details>
+    <details><summary>Preciso instalar algum aplicativo?</summary><p>Não. O painel abre no navegador do celular. Você pode deixar um ícone na tela inicial para abrir com um toque. O guia explica como, passo a passo.</p></details>
+    <details><summary>Onde ficam os meus dados?</summary><p>Só no seu celular, dentro do navegador, sem prazo. Eles não vão para a internet. Se você limpar os dados do navegador ou trocar de celular, eles somem. Por isso o painel exporta os registros para as planilhas, e o guia recomenda exportar uma vez por semana.</p></details>
+    <details><summary>A planilha calcula imposto?</summary><p>Ela faz uma estimativa com a percentagem e o valor fixo que você escrever. Os números da planilha são exemplos para você trocar. Não é conselho fiscal: confirme com o seu contador.</p></details>
+    <details><summary>Tem mensalidade?</summary><p>Não. O pagamento é único, de R$ 29,90.</p></details>
+    <details><summary>Como recebo o produto?</summary><p>Depois do pagamento, a Hotmart envia o acesso por e-mail. Você baixa o arquivo ZIP com o painel, as duas planilhas e o guia em PDF.</p></details>
+    <details><summary>O produto promete que vou ganhar mais?</summary><p>Não. É uma ferramenta de organização. Ela mostra os números que você lança, mas os resultados dependem do seu trabalho e dos valores que você registra.</p></details>
+    <details><summary>Tem garantia?</summary><p>Sim, 15 dias de garantia pela Hotmart. Se sentir que não é para você, peça o reembolso dentro desse prazo.</p></details>
+  </div>
+</section>
 
-<h2>Perguntas frequentes</h2>
-<div class="faq">
-<div class="faq-item"><h3>Como calcular o lucro por km?</h3><p>O lucro por km é calculado assim: lucro do dia dividido pelos km rodados no dia. O painel faz essa conta para você.</p></div>
-<div class="faq-item"><h3>Quanto ganha um motorista de aplicativo?</h3><p>O ganho varia por cidade, horas trabalhadas, gastos e demanda. Este produto não promete ganhos, ele só ajuda você a organizar e ver quanto sobra.</p></div>
-<div class="faq-item"><h3>O painel funciona sem internet?</h3><p>Sim. O painel em HTML funciona no navegador do celular, mesmo sem internet, depois de aberto uma vez.</p></div>
-<div class="faq-item"><h3>O que eu recebo ao comprar?</h3><p>Você recebe o painel em HTML para celular, a planilha para Excel, a planilha para Google Sheets e o guia rápido em PDF.</p></div>
-<div class="faq-item"><h3>Como eu recebo o acesso?</h3><p>Após o pagamento, você recebe o acesso por e-mail para baixar os arquivos e começar a usar no mesmo dia.</p></div>
-<div class="faq-item"><h3>Tem garantia?</h3><p>Sim. Você tem 15 dias de garantia para pedir reembolso, conforme as regras da plataforma de pagamento.</p></div>
-<div class="faq-item"><h3>Preciso saber Excel?</h3><p>Não. O painel em HTML é o principal e é simples de usar. As planilhas são um complemento para quem quer revisar a semana.</p></div>
-<div class="faq-item"><h3>Funciona em qualquer celular?</h3><p>Sim. O painel funciona no navegador do celular, sem instalar aplicativo.</p></div>
-</div>
+<section class="article">
+  <div class="wrap">
+    <div class="txt">
+      <h2 class="rv">Como calcular o lucro de motorista de aplicativo</h2>
+      <p>O que entra na conta do app não é o que sobra. Para saber o lucro de verdade, você precisa descontar o que gastou para trabalhar.</p>
+      <h3>A conta em três passos</h3>
+      <ul>
+        <li><b>Lucro do dia</b> = ganhos do dia menos os gastos do dia (combustível, manutenção, lavagem, pedágio, alimentação).</li>
+        <li><b>Lucro por hora</b> = lucro do dia dividido pelas horas de turno.</li>
+        <li><b>Lucro por km</b> = lucro do dia dividido pelos km rodados.</li>
+      </ul>
+      <div class="calc">Exemplo: ganhos de R$ 300, gastos de R$ 100 (combustível e comida) = lucro de R$ 200. Em 8 horas, são R$ 25 por hora. Em 120 km, são R$ 1,67 por km.</div>
+      <p>Fazer essa conta todo dia, de cabeça, cansa. O painel guarda os números que você lança e mostra o resultado na hora, também por semana, por mês e por ano.</p>
+      <h3>Por que olhar por hora e por km</h3>
+      <p>Um dia com ganho alto pode ter lucro baixo se você rodou muitas horas ou muitos km. Quando você vê o lucro por hora e por km, fica mais fácil decidir quando vale a pena continuar e quando é melhor parar.</p>
+      <p style="margin-top:14px"><a class="btn" href="https://pay.hotmart.com/F108496192F" data-cta="artigo">Quero o Painel por R$ 29,90</a></p>
+    </div>
+  </div>
+</section>
 
-<div class="preco-box" style="margin-top:22px">
-<div class="preco">R$ 29,90 <small>pagamento único</small></div>
-<p>Painel + planilhas + guia • Garantia de 15 dias</p>
-</div>
-<a class="btn" href="https://pay.hotmart.com/F108496192F">QUERO MEU PAINEL AGORA<br><small>R$ 29,90 • Pagamento único • Garantia de 15 dias</small></a>
-<p class="garantia">Se não for para você, você pode pedir reembolso em até 15 dias.</p>
-</div>
-
-<div class="sticky"><div><b>R$ 29,90</b><small>Pagamento único • 15 dias de garantia</small></div><a href="https://pay.hotmart.com/F108496192F">Comprar agora</a></div>
+</main>
 
 <footer>
-Painel do Motorista de Aplicativo • Ferramenta de organização financeira<br>
-Não garante ganhos. Resultados variam.<br>
-© 2026 • Pagamento processado pela plataforma de pagamento • Compra e entrega pela Hotmart
+  <div class="wrap">
+    <p><b>Painel do Motorista de App</b> · Mayra Sterling Studio</p>
+    <p>Material de organização financeira pessoal. Não é aconselhamento financeiro, fiscal ou jurídico e não garante ganhos. Os resultados dependem dos valores que você registra. Os valores mostrados nas imagens são exemplos.</p>
+    <p>Produto independente, sem ligação com Uber, 99, inDrive, Bolt ou qualquer outra plataforma. Compra e suporte pela Hotmart.</p>
+  </div>
 </footer>
+
+<div class="sticky" id="sticky" role="complementary" aria-label="Comprar">
+  <div class="p">R$ 29,90<small>pagamento único · 15 dias de garantia</small></div>
+  <a class="btn" href="https://pay.hotmart.com/F108496192F" data-cta="sticky">Comprar</a>
+</div>
+
+<script>
+/* barra de compra fixa: aparece depois do topo da página e some junto do preço */
+(function(){
+  var bar=document.getElementById('sticky'),hero=document.querySelector('.hero'),price=document.getElementById('comprar');
+  if(!bar||!('IntersectionObserver' in window)){return}
+  var heroOut=false,priceIn=false;
+  function upd(){bar.classList.toggle('on',heroOut&&!priceIn)}
+  new IntersectionObserver(function(e){heroOut=!e[0].isIntersecting;upd()},{threshold:0}).observe(hero);
+  new IntersectionObserver(function(e){priceIn=e[0].isIntersecting;upd()},{threshold:0.15}).observe(price);
+})();
+
+/* troca claro/escuro nas telas */
+(function(){
+  var tabs=document.querySelectorAll('.tabs button'),imgs=document.querySelectorAll('#shots img');
+  function set(mode){
+    tabs.forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.mode===mode))});
+    imgs.forEach(function(i){i.src=i.dataset[mode]});
+  }
+  tabs.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.mode)})});
+})();
+
+/* entrada suave dos blocos */
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>
-
